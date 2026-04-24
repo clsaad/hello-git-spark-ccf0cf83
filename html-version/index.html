@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inetweb — Soluções na nuvem para o seu negócio</title>
+  <meta name="description" content="Hospedagem, infraestrutura e serviços web rápidos, seguros e escaláveis pela Inetweb." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="assets/inetweb-logo.png" alt="Inetweb" /></a>
+      <nav class="nav-desktop">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Soluções na nuvem<br/>para o seu negócio</h1>
+      <p>Hospedagem, infraestrutura e serviços web rápidos, seguros e escaláveis.</p>
+      <div class="hero-actions">
+        <a href="comece-agora.html" class="btn btn-secondary btn-lg">Comece agora</a>
+        <a href="#servicos" class="btn btn-outline btn-lg">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nossos Serviços</h2>
+        <p>Tudo que sua empresa precisa para crescer online.</p>
+      </div>
+      <div class="grid grid-4">
+        <article class="card">
+          <div class="card-icon">☁️</div>
+          <h3>Cloud Computing</h3>
+          <p>Infraestrutura em nuvem escalável e sob demanda.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🖥️</div>
+          <h3>Hospedagem de Sites</h3>
+          <p>Hospedagem rápida, segura e com alta disponibilidade.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">✉️</div>
+          <h3>E-mail Profissional</h3>
+          <p>Contas de e-mail com seu domínio, antispam e webmail.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">💾</div>
+          <h3>Cloud Backup</h3>
+          <p>Backups automáticos e criptografados na nuvem.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section section-muted">
+    <div class="container grid grid-2 align-center">
+      <div>
+        <h2>Sobre a Inetweb</h2>
+        <p>Há <strong>27 anos de história</strong>, a Inetweb oferece soluções de hospedagem
+          e infraestrutura digital para empresas de todos os portes. Nossa missão é manter
+          seu negócio sempre online, seguro e veloz.</p>
+        <p>Combinamos tecnologia de ponta com atendimento humano para entregar a melhor
+          experiência possível.</p>
+      </div>
+      <div class="stats">
+        <div><strong>99.9%</strong><span>Uptime</span></div>
+        <div><strong>24/7</strong><span>Suporte</span></div>
+        <div><strong>27</strong><span>Anos</span></div>
+        <div><strong>5k+</strong><span>Clientes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Fale Conosco</h2>
+        <p>Envie sua mensagem e nossa equipe entrará em contato.</p>
+      </div>
+      <div class="grid grid-2 contact-grid">
+        <div class="contact-info">
+          <div><strong>E-mail</strong><span>comercial@inetweb.com.br</span></div>
+          <div><strong>Telefone</strong><span>(19) 3405-7292<br/>0800-888-7457</span></div>
+          <div><strong>Endereço</strong><span>São Paulo, Brasil</span></div>
+        </div>
+        <form id="contact-form" class="form" action="api/send-contact.php" method="post" novalidate>
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" maxlength="100" required />
+            <small class="error" data-for="nome"></small>
+          </div>
+          <div class="grid grid-2-sm">
+            <div class="field">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" maxlength="20" required />
+              <small class="error" data-for="telefone"></small>
+            </div>
+            <div class="field">
+              <label for="empresa">Empresa</label>
+              <input id="empresa" name="empresa" maxlength="120" required />
+              <small class="error" data-for="empresa"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" maxlength="255" required />
+            <small class="error" data-for="email"></small>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" maxlength="2000" required></textarea>
+            <small class="error" data-for="mensagem"></small>
+          </div>
+          <!-- honeypot anti-spam -->
+          <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" />
+          <button type="submit" class="btn btn-secondary btn-block">Enviar mensagem</button>
+          <p class="form-note" id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/inetweb-logo.png" alt="Inetweb" />
+      <p>© <span id="year"></span> Inetweb. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
