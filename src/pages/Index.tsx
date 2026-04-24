@@ -142,8 +142,8 @@ const Index = () => {
 
         <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto">
           <div className="space-y-6">
-            <div className="flex items-start gap-3"><Mail className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">E-mail</div><div className="text-muted-foreground">cleber.saad@inetweb.com.br</div></div></div>
-            <div className="flex items-start gap-3"><Phone className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">Telefone</div><div className="text-muted-foreground">+55 (11) 0000-0000</div></div></div>
+            <div className="flex items-start gap-3"><Mail className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">E-mail</div><div className="text-muted-foreground">comercial@inetweb.com.br</div></div></div>
+            <div className="flex items-start gap-3"><Phone className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">Telefone</div><div className="text-muted-foreground">(19) 3405-7292<br />0800-888-7457</div></div></div>
             <div className="flex items-start gap-3"><MapPin className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">Endereço</div><div className="text-muted-foreground">São Paulo, Brasil</div></div></div>
           </div>
 
