@@ -113,9 +113,9 @@ const Index = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre a Inetweb</h2>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Há mais de uma década oferecendo soluções de hospedagem e infraestrutura digital
-              para empresas de todos os portes. Nossa missão é manter seu negócio sempre online,
-              seguro e veloz.
+              Há <strong>27 anos de história</strong>, a Inetweb oferece soluções de hospedagem
+              e infraestrutura digital para empresas de todos os portes. Nossa missão é manter
+              seu negócio sempre online, seguro e veloz.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Combinamos tecnologia de ponta com atendimento humano para entregar a melhor
@@ -126,7 +126,7 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-8">
               <div><div className="text-4xl font-bold">99.9%</div><div className="text-sm opacity-80">Uptime</div></div>
               <div><div className="text-4xl font-bold">24/7</div><div className="text-sm opacity-80">Suporte</div></div>
-              <div><div className="text-4xl font-bold">10+</div><div className="text-sm opacity-80">Anos</div></div>
+              <div><div className="text-4xl font-bold">27</div><div className="text-sm opacity-80">Anos</div></div>
               <div><div className="text-4xl font-bold">5k+</div><div className="text-sm opacity-80">Clientes</div></div>
             </div>
           </div>
