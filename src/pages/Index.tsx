@@ -18,6 +18,37 @@ const contactSchema = z.object({
 });
 
 const Index = () => {
+  const { toast } = useToast();
+  const [submitting, setSubmitting] = useState(false);
+  const [form, setForm] = useState({ nome: "", telefone: "", empresa: "", email: "", mensagem: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const handleChange = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm((f) => ({ ...f, [field]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const result = contactSchema.safeParse(form);
+    if (!result.success) {
+      const fieldErrors: Record<string, string> = {};
+      result.error.issues.forEach((i) => { if (i.path[0]) fieldErrors[i.path[0] as string] = i.message; });
+      setErrors(fieldErrors);
+      return;
+    }
+    setErrors({});
+    setSubmitting(true);
+    // TODO: ativar Lovable Cloud para chamar a Edge Function `send-contact-email`
+    // que envia via SMTP usando os Secrets SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS.
+    await new Promise((r) => setTimeout(r, 600));
+    setSubmitting(false);
+    toast({
+      title: "Envio indisponível",
+      description: "Ative o Lovable Cloud para habilitar o envio por SMTP. Os campos foram validados com sucesso.",
+      variant: "destructive",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
