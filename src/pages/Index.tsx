@@ -74,7 +74,9 @@ const Index = () => {
             Hospedagem, infraestrutura e serviços web rápidos, seguros e escaláveis.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">Comece agora</Button>
+            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              <Link to="/comece-agora">Comece agora</Link>
+            </Button>
             <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">Saiba mais</Button>
           </div>
         </div>
