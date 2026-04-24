@@ -88,10 +88,10 @@ const Index = () => {
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Cloud, title: "Cloud Hosting", desc: "Servidores em nuvem com alta disponibilidade." },
-            { icon: Shield, title: "Segurança", desc: "Proteção SSL, backups e firewall avançado." },
-            { icon: Zap, title: "Performance", desc: "Infraestrutura otimizada para máxima velocidade." },
-            { icon: Globe, title: "Domínios", desc: "Registro e gerenciamento simplificados." },
+            { icon: Cloud, title: "Cloud Computing", desc: "Infraestrutura em nuvem escalável e sob demanda." },
+            { icon: Server, title: "Hospedagem de Sites", desc: "Hospedagem rápida, segura e com alta disponibilidade." },
+            { icon: MailIcon, title: "E-mail Profissional", desc: "Contas de e-mail com seu domínio, antispam e webmail." },
+            { icon: HardDrive, title: "Cloud Backup", desc: "Backups automáticos e criptografados na nuvem." },
           ].map((s) => (
             <Card key={s.title} className="border-2 hover:border-secondary transition-colors">
               <CardHeader>
