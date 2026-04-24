@@ -1,7 +1,21 @@
+import { useState } from "react";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Cloud, Shield, Zap, Globe, Mail, Phone, MapPin } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { Cloud, Server, Mail as MailIcon, HardDrive, Mail, Phone, MapPin, Loader2 } from "lucide-react";
 import logo from "@/assets/inetweb-logo.png";
+
+const contactSchema = z.object({
+  nome: z.string().trim().min(2, "Informe seu nome").max(100),
+  telefone: z.string().trim().min(8, "Telefone inválido").max(20),
+  empresa: z.string().trim().min(1, "Informe a empresa").max(120),
+  email: z.string().trim().email("E-mail inválido").max(255),
+  mensagem: z.string().trim().min(5, "Escreva uma mensagem").max(2000),
+});
 
 const Index = () => {
   return (
