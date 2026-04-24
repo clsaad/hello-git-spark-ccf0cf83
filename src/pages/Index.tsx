@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -74,7 +75,9 @@ const Index = () => {
             Hospedagem, infraestrutura e serviços web rápidos, seguros e escaláveis.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">Comece agora</Button>
+            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              <Link to="/comece-agora">Comece agora</Link>
+            </Button>
             <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">Saiba mais</Button>
           </div>
         </div>
@@ -110,9 +113,9 @@ const Index = () => {
           <div>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Sobre a Inetweb</h2>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Há mais de uma década oferecendo soluções de hospedagem e infraestrutura digital
-              para empresas de todos os portes. Nossa missão é manter seu negócio sempre online,
-              seguro e veloz.
+              Há <strong>27 anos de história</strong>, a Inetweb oferece soluções de hospedagem
+              e infraestrutura digital para empresas de todos os portes. Nossa missão é manter
+              seu negócio sempre online, seguro e veloz.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               Combinamos tecnologia de ponta com atendimento humano para entregar a melhor
@@ -123,7 +126,7 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-8">
               <div><div className="text-4xl font-bold">99.9%</div><div className="text-sm opacity-80">Uptime</div></div>
               <div><div className="text-4xl font-bold">24/7</div><div className="text-sm opacity-80">Suporte</div></div>
-              <div><div className="text-4xl font-bold">10+</div><div className="text-sm opacity-80">Anos</div></div>
+              <div><div className="text-4xl font-bold">27</div><div className="text-sm opacity-80">Anos</div></div>
               <div><div className="text-4xl font-bold">5k+</div><div className="text-sm opacity-80">Clientes</div></div>
             </div>
           </div>
@@ -139,8 +142,8 @@ const Index = () => {
 
         <div className="grid gap-12 md:grid-cols-2 max-w-5xl mx-auto">
           <div className="space-y-6">
-            <div className="flex items-start gap-3"><Mail className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">E-mail</div><div className="text-muted-foreground">cleber.saad@inetweb.com.br</div></div></div>
-            <div className="flex items-start gap-3"><Phone className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">Telefone</div><div className="text-muted-foreground">+55 (11) 0000-0000</div></div></div>
+            <div className="flex items-start gap-3"><Mail className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">E-mail</div><div className="text-muted-foreground">comercial@inetweb.com.br</div></div></div>
+            <div className="flex items-start gap-3"><Phone className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">Telefone</div><div className="text-muted-foreground">(19) 3405-7292<br />0800-888-7457</div></div></div>
             <div className="flex items-start gap-3"><MapPin className="h-6 w-6 text-secondary mt-1" /><div><div className="font-semibold">Endereço</div><div className="text-muted-foreground">São Paulo, Brasil</div></div></div>
           </div>
 
